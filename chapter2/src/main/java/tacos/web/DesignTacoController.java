@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import tacos.Ingredient;
 import tacos.Ingredient.*;
 import tacos.Taco;
+import tacos.TacoOrder;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,16 +35,14 @@ public class DesignTacoController {
                 new Ingredient("SLSA", "Salsa", Type.SAUCE),
                 new Ingredient("SRCR", "Sour Cream", Type.SAUCE)
         );
-        Type[] types = Ingredient.Type.values();
+        Type[] types = Type.values();
         for (Type type : types) {
-            model.addAttribute(type.toString().toLowerCase(),
-                    filterByType(ingredients, type));
+            model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));
         }
     }
 
     @GetMapping
     public String showDesignForm(Model model) {
-        model.addAttribute("taco", new Taco());
         return "design";
     }
 
@@ -51,7 +50,17 @@ public class DesignTacoController {
             List<Ingredient> ingredients, Type type) {
         return ingredients
                 .stream()
-                .filter(x -> x.getType().equals(type))
+                .filter(ingredient -> ingredient.getType().equals(type))
                 .collect(Collectors.toList());
+    }
+
+    @ModelAttribute(name = "taco")
+    public Taco taco() {
+        return new Taco();
+    }
+
+    @ModelAttribute(name = "tacoOrder")
+    public TacoOrder order() {
+        return new TacoOrder();
     }
 }
