@@ -1,0 +1,1 @@
+1、thymeleaf中属性th:field一般与java Object的属性相对应，并且直接解析为html的name属性，如：th:field="*{ingredients}"=>name="ingredients".
