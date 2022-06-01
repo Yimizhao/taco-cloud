@@ -1,0 +1,1 @@
+利用spring的JDBCTemplate简化直接JDBC
