@@ -13,6 +13,8 @@
         <module>chapter1</module>
         <module>chapter2</module>
         <module>chapter3</module>
+        <module>chapte3_springDataJdnc</module>
+        <module>chapter3_SpringDataJPA</module>
     </modules>
 
 </project>
