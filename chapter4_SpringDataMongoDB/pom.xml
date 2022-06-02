@@ -55,6 +55,11 @@
             <artifactId>de.flapdoodle.embed.mongo</artifactId>
 <!--            <scope>test</scope>-->
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cz.jirutka.spring</groupId>-->
+<!--            <artifactId>embedmongo-spring</artifactId>-->
+<!--&lt;!&ndash;            <version>RELEASE</version>&ndash;&gt;-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
