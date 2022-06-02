@@ -15,6 +15,7 @@
         <module>chapter3</module>
         <module>chapte3_springDataJdnc</module>
         <module>chapter3_SpringDataJPA</module>
+        <module>chapter4_SpringDataMongoDB</module>
     </modules>
 
 </project>
